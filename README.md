@@ -35,12 +35,11 @@
 
 ```
 Поле для вставки кода...
-[задание №1](https://github.com/newDjon/netology/commits/cbffc232e6d407c80657ef34ae2fdd0b65127bce)
-Задание №1
 ....
 ....
 ....
 ```
+[задание №1](https://github.com/newDjon/netology/commits/cbffc232e6d407c80657ef34ae2fdd0b65127bce)
 
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота 1](ссылка на скриншот 1)`
@@ -61,11 +60,11 @@
 
 ```
 Поле для вставки кода...
-[Задание №2](https://github.com/newDjon/netology/commits/515b2109e173d0509e123cf09c34c168bba48a77)
-Задание №2
+
 ....
 ....
 ```
+[Задание №2](https://github.com/newDjon/netology/commits/515b2109e173d0509e123cf09c34c168bba48a77)
 
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота 2](ссылка на скриншот 2)`

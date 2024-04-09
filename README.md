@@ -64,7 +64,7 @@
 ....
 ....
 ```
-[Задание №2](https://github.com/newDjon/netology/commit/515b2109e173d0509e123cf09c34c168bba48a77)
+[Задание №2](https://github.com/newDjon/netology/commit/d916486e907385ace58be2b4434db61eb3499dbe)
 
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота 2](ссылка на скриншот 2)`

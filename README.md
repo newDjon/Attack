@@ -39,12 +39,13 @@
 ....
 ....
 ```
-[задание №1](https://github.com/newDjon/netology/commit/cbffc232e6d407c80657ef34ae2fdd0b65127bce)
+
 
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота 1](ссылка на скриншот 1)`
-
-
+![Задание №1_1](https://github.com/newDjon/8-01/blob/main/скрин%201_1.png)
+![Задание №1_2](https://github.com/newDjon/8-01/blob/main/скрин%201_2.png)
+![Задание №1_3](https://github.com/newDjon/8-01/blob/main/скрин%201_3.png)
 ---
 
 ### Задание 2
@@ -68,6 +69,9 @@
 
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота 2](ссылка на скриншот 2)`
+![Задание №2_1](https://github.com/newDjon/8-01/blob/main/скрин%202_1.png)
+![Задание №2_2](https://github.com/newDjon/8-01/blob/main/скрин%202_2.png)
+![Задание №2_3](https://github.com/newDjon/8-01/blob/main/скрин%202_3.png)
 
 
 ---
@@ -93,7 +97,10 @@
 
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота](ссылка на скриншот)`
-![скрин merge](https://github.com/newDjon/sys-pattern-homework/blob/main/скрин_8_1.png)
+![Задание №3_1](https://github.com/newDjon/8-01/blob/main/скрин%203_1.png)
+![Задание №3_2](https://github.com/newDjon/8-01/blob/main/скрин%203_2.png)
+![Задание №3_3](https://github.com/newDjon/8-01/blob/main/скрин%203_3.png)
+
 ### Задание 4
 
 `Приведите ответ в свободной форме........`

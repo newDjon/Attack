@@ -68,7 +68,7 @@ build:
   image: docker:latest
   script:
    - docker build .
----
+```
 
 
 `При необходимости прикрепитe сюда скриншоты

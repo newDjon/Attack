@@ -38,47 +38,62 @@
 
 
 `При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
-![Задание №1_1](https://github.com/newDjon/8-03/blob/main/скрин_1.png)
-![Задание №1_2](https://github.com/newDjon/8-03/blob/main/скрин_2.png)
+![Задание №1_1](https://github.com/newDjon/8-03/blob/main/скрин_5.png)
+
+```
+Поле для вставки кода...
+wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
+dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
+apt update
+apt install postgresql
+apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-conf zabbix-sql-scripts
+sudo -u postgres createuser --pwprompt zabbix
+sudo -u postgres createdb -O zabbix zabbix
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+DBPassword=password
+systemctl restart zabbix-server zabbix-agent apache2
+systemctl enable zabbix-server zabbix-agent apache2
+
+```
+
+
 
 ---
 
 ### Задание 2
 
-Что нужно сделать:
+Установите Zabbix Agent на два хоста.
 
-Запушьте репозиторий на GitLab, изменив origin. Это изучалось на занятии по Git.
-Создайте .gitlab-ci.yml, описав в нём все необходимые, на ваш взгляд, этапы.
-В качестве ответа в шаблон с решением добавьте:
+Процесс выполнения
+Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
+Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.
+Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.
+Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.
+Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.
+Требования к результаты
+Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу
+Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером
+Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
+Приложите в файл README.md текст использованных команд в GitHub
 
-файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне;
-скриншоты с успешно собранными сборками.
+`При необходимости прикрепитe сюда скриншоты
+![Задание №2_1](https://github.com/newDjon/8-03/blob/main/скрин_1.png)
+![Задание №2_1](https://github.com/newDjon/8-03/blob/main/скрин_2.png)
+![Задание №2_1](https://github.com/newDjon/8-03/blob/main/скрин_3.png)
+![Задание №2_1](https://github.com/newDjon/8-03/blob/main/скрин_4.png)
+
 
 ```
 Поле для вставки кода...
+wget https://repo.zabbix.com/zabbix/6.4/debian/pool/main/z/zabbix-release/zabbix-release_6.4-1+debian9_all.deb
+dpkg -i zabbix-release_6.4-1+debian9_all.deb
+apt update
+apt install zabbix-agent2 zabbix-agent2-plugin-*
+systemctl restart zabbix-agent2
 
-stages:
-  - test
-  - build
-
-test:
-  stage: test
-  image: golang:1.17
-  script: 
-   - go test .
-
-build:
-  stage: build
-  image: docker:latest
-  script:
-   - docker build .
 ```
 
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
-![Задание №2_1](https://github.com/newDjon/8-03/blob/main/скрин_3.png)
 
 
 

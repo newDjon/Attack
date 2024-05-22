@@ -32,8 +32,6 @@
 
 
 
-
-`При необходимости прикрепитe сюда скриншоты
 ![Задание №1_1](https://github.com/newDjon/hw-03/blob/main/скрин_2.png)
 ![Задание №1_2](https://github.com/newDjon/hw-03/blob/main/скрин_3.png)
 

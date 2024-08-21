@@ -28,7 +28,7 @@
 Установите и запустите Elasticsearch, после чего поменяйте параметр cluster_name на случайный.
 Приведите скриншот команды 'curl -X GET 'localhost:9200/_cluster/health?pretty', сделанной на сервере с установленным Elasticsearch. Где будет виден нестандартный cluster_name.
 
-![Задание №2_1](https://github.com/newDjon/hw-03/blob/main/elasticsearsh.png)
+![Задание №2_1](https://github.com/newDjon/hw-03/blob/main/elasticsearch.png)
 
 ---
 

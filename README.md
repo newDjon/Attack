@@ -85,7 +85,7 @@ $ rabbitmqadmin get queue='hello'
 ![Задание №3_1](https://github.com/newDjon/hw-03/blob/main/cluster7.png)
 ![Задание №3_1](https://github.com/newDjon/hw-03/blob/main/cluster2.png)
 ![Задание №3_1](https://github.com/newDjon/hw-03/blob/main/cluster3.png)
-![Задание №3_1](https://github.com/newDjon/hw-03/blob/main/cluster4.png)
+![Задание №3_1](https://github.com/newDjon/hw-03/blob/main/cluster9.png)
 
 ---
 

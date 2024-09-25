@@ -53,6 +53,7 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.
 
+![Задание №1](https://github.com/newDjon/hw-03/blob/main/command.png)
 
 ---
 

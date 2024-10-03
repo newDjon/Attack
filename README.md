@@ -31,7 +31,7 @@ SELECT DISTINCT district FROM address WHERE district LIKE 'K%a' AND district NOT
 
 ```
 
-![Задание №1](https://github.com/newDjon/hw-03/blob/main/mysql_user.png)
+![Задание №1](https://github.com/newDjon/hw-03/blob/main/district.png)
 
 
 ---
@@ -44,7 +44,7 @@ SELECT DISTINCT district FROM address WHERE district LIKE 'K%a' AND district NOT
 SELECT * FROM payment WHERE payment_date BETWEEN '2005-06-15 00:00:00' AND '2005-06-18 23:59:59' AND amount > 10
 ```
 
-![Задание №2](https://github.com/newDjon/hw-03/blob/main/prikey.png)
+![Задание №2](https://github.com/newDjon/hw-03/blob/main/pay.png)
 
 ---
 
@@ -57,20 +57,25 @@ SELECT * FROM rental
 ORDER BY rental_id DESC LIMIT 5
 ```
 
-![Задание №3](https://github.com/newDjon/hw-03/blob/main/prikey.png)
+![Задание №3](https://github.com/newDjon/hw-03/blob/main/rental.png)
 
 ---
 
 ### Задание 4
 
-Получите последние пять аренд фильмов.
+Одним запросом получите активных покупателей, имена которых Kelly или Willie.
+
+Сформируйте вывод в результат таким образом:
+
+все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
+замените буквы 'll' в именах на 'pp'.
 
 ```
 SELECT LOWER(first_name) AS имя, LOWER(last_name) AS фамилия, REPLACE(LOWER(first_name), 'll', 'pp') AS Other FROM customer WHERE active = 1 
 AND first_name LIKE 'Kelly' OR first_name LIKE 'Willie'
 ```
 
-![Задание №4](https://github.com/newDjon/hw-03/blob/main/prikey.png)
+![Задание №4](https://github.com/newDjon/hw-03/blob/main/customer.png)
 
 ---
 
@@ -82,7 +87,7 @@ AND first_name LIKE 'Kelly' OR first_name LIKE 'Willie'
 SELECT email, LEFT(email, LOCATE('@', email) - 1), RIGHT(email, LENGTH (email) - LOCATE('@', email)) FROM customer
 ```
 
-![Задание №5](https://github.com/newDjon/hw-03/blob/main/prikey.png)
+![Задание №5](https://github.com/newDjon/hw-03/blob/main/email.png)
 
 ---
 

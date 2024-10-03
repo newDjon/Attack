@@ -1,4 +1,4 @@
-Домашнее задание к занятию «Работа с данными (DDL/DML)» - `Уткин Евгений`
+Домашнее задание к занятию «SQL. Часть 1» - `Уткин Евгений`
 
 
 ### Инструкция по выполнению домашнего задания
@@ -24,44 +24,65 @@
 
 ### Задание 1
 
-1.1. Поднимите чистый инстанс MySQL версии 8.0+. Можно использовать локальный сервер или контейнер Docker.
+Получите уникальные названия районов из таблицы с адресами, которые начинаются на “K” и заканчиваются на “a” и не содержат пробелов.
 
-1.2. Создайте учётную запись sys_temp.
+```
+SELECT DISTINCT district FROM address WHERE district LIKE 'K%a' AND district NOT LIKE '% %'
 
-1.3. Выполните запрос на получение списка пользователей в базе данных. (скриншот)
+```
 
-![Задание №1_3](https://github.com/newDjon/hw-03/blob/main/mysql_user.png)
+![Задание №1](https://github.com/newDjon/hw-03/blob/main/mysql_user.png)
 
-1.4. Дайте все права для пользователя sys_temp.
-
-1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
-
-![Задание №1_5](https://github.com/newDjon/hw-03/blob/main/mysql_grant.png)
-
-1.6. Переподключитесь к базе данных от имени sys_temp.
-
-Для смены типа аутентификации с sha2 используйте запрос:
-
-ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-1.6. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
-
-1.7. Восстановите дамп в базу данных.
-
-1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
-
-![Задание №1_3](https://github.com/newDjon/hw-03/blob/main/mysql_tables.png)
-
-Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.
-
-![Задание №1](https://github.com/newDjon/hw-03/blob/main/command.png)
 
 ---
 
 ### Задание 2
 
-Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
+Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года включительно и стоимость которых превышает 10.00.
 
-![Задание №2_1](https://github.com/newDjon/hw-03/blob/main/prikey.png)
+```
+SELECT * FROM payment WHERE payment_date BETWEEN '2005-06-15 00:00:00' AND '2005-06-18 23:59:59' AND amount > 10
+```
+
+![Задание №2](https://github.com/newDjon/hw-03/blob/main/prikey.png)
+
+---
+
+### Задание 3
+
+Получите последние пять аренд фильмов.
+
+```
+SELECT * FROM rental
+ORDER BY rental_id DESC LIMIT 5
+```
+
+![Задание №3](https://github.com/newDjon/hw-03/blob/main/prikey.png)
+
+---
+
+### Задание 4
+
+Получите последние пять аренд фильмов.
+
+```
+SELECT LOWER(first_name) AS имя, LOWER(last_name) AS фамилия, REPLACE(LOWER(first_name), 'll', 'pp') AS Other FROM customer WHERE active = 1 
+AND first_name LIKE 'Kelly' OR first_name LIKE 'Willie'
+```
+
+![Задание №4](https://github.com/newDjon/hw-03/blob/main/prikey.png)
+
+---
+
+### Задание 5
+
+Получите последние пять аренд фильмов.
+
+```
+SELECT email, LEFT(email, LOCATE('@', email) - 1), RIGHT(email, LENGTH (email) - LOCATE('@', email)) FROM customer
+```
+
+![Задание №5](https://github.com/newDjon/hw-03/blob/main/prikey.png)
 
 ---
 

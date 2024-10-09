@@ -24,72 +24,61 @@
 
 ### Задание 1
 
-Получите уникальные названия районов из таблицы с адресами, которые начинаются на “K” и заканчиваются на “a” и не содержат пробелов.
+Одним запросом получите информацию о магазине, в котором обслуживается более 300 покупателей, и выведите в результат следующую информацию:
+
+фамилия и имя сотрудника из этого магазина;
+город нахождения магазина;
+количество пользователей, закреплённых в этом магазине.
 
 ```
-SELECT DISTINCT district FROM address WHERE district LIKE 'K%a' AND district NOT LIKE '% %'
+SELECT st.first_name AS Имя, st.last_name AS Фамилия, a.address AS адрес, COUNT(c.store_id) AS Покупки 
+FROM customer c
+JOIN store s ON c.store_id = s.store_id
+JOIN staff st ON s.manager_staff_id = st.staff_id 
+JOIN address a ON s.store_id = a.address_id
+GROUP BY c.store_id
+HAVING Покупки > 300
 
 ```
 
-![Задание №1](https://github.com/newDjon/hw-03/blob/main/district.png)
+![Задание №1](https://github.com/newDjon/hw-03/blob/main/store.png)
 
 
 ---
 
 ### Задание 2
 
-Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года включительно и стоимость которых превышает 10.00.
+Получите количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
 
 ```
-SELECT * FROM payment WHERE payment_date BETWEEN '2005-06-15 00:00:00' AND '2005-06-18 23:59:59' AND amount > 10
+SELECT COUNT(1) AS big_films
+FROM film f 
+WHERE length > (SELECT AVG(length) from film)
+
 ```
 
-![Задание №2](https://github.com/newDjon/hw-03/blob/main/pay.png)
+![Задание №2](https://github.com/newDjon/hw-03/blob/main/film.png)
 
 ---
 
 ### Задание 3
 
-Получите последние пять аренд фильмов.
+Получите информацию, за какой месяц была получена наибольшая сумма платежей, и добавьте информацию по количеству аренд за этот месяц.
 
 ```
-SELECT * FROM rental
-ORDER BY rental_id DESC LIMIT 5
+SELECT MONTH(payment_date) AS data, COUNT(payment_id) AS count_pay, SUM(amount) AS amount
+FROM payment
+GROUP BY MONTH(payment_date) 
+ORDER BY count_pay DESC LIMIT 1
+
 ```
 
-![Задание №3](https://github.com/newDjon/hw-03/blob/main/rental.png)
+![Задание №3](https://github.com/newDjon/hw-03/blob/main/count_pay.png)
 
 ---
 
-### Задание 4
 
-Одним запросом получите активных покупателей, имена которых Kelly или Willie.
 
-Сформируйте вывод в результат таким образом:
-
-все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
-замените буквы 'll' в именах на 'pp'.
-
-```
-SELECT LOWER(first_name) AS имя, LOWER(last_name) AS фамилия, REPLACE(LOWER(first_name), 'll', 'pp') AS Other FROM customer WHERE active = 1 
-AND first_name LIKE 'Kelly' OR first_name LIKE 'Willie'
-```
-
-![Задание №4](https://github.com/newDjon/hw-03/blob/main/customer.png)
-
----
-
-### Задание 5
-
-Получите последние пять аренд фильмов.
-
-```
-SELECT email, LEFT(email, LOCATE('@', email) - 1), RIGHT(email, LENGTH (email) - LOCATE('@', email)) FROM customer
-```
-
-![Задание №5](https://github.com/newDjon/hw-03/blob/main/email.png)
-
----
 
 
 

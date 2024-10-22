@@ -69,6 +69,7 @@ pg_dump db > db.sql
 pg_dump -Fc db > db.dump
 
 Восстановление утилитой pgrestore, возможно когда бд выгружена в архивном формате.
+
 pg_restore -d newdb db.dump
 
 ---
@@ -84,10 +85,13 @@ pg_restore -d newdb db.dump
 
 Для того чтобы в MySQL настроить инкрементное копирование нужно в настройках (/etc/mysql/mysql.conf.d/mysqld.cnf) включить двоичный журнал.
 log_bin = /var/log/mysql/mysql-bin.log expire_logs_days = 10
+
 Перезапустить MySQL
 systemctl restart mysql
+
 Далее делаем полное резервное копирование 
 mysqldump --single-transaction --flush-logs --all-databases > backup.sql
+
 Далее можно делать инкрементное копирование 
 mysqladmin -uroot -p flush-logs
 

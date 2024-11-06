@@ -43,9 +43,11 @@
 
 ![Задание №1](https://github.com/newDjon/Attack/blob/main/nmap.png)
 
-https://www.exploit-db.com/exploits/17491.
-https://www.exploit-db.com/exploits/29724.
-https://www.exploit-db.com/exploits/32849.
+https://www.exploit-db.com/exploits/17491
+
+https://www.exploit-db.com/exploits/29724
+
+https://www.exploit-db.com/exploits/32849
 
 ---
 
@@ -62,21 +64,25 @@ https://www.exploit-db.com/exploits/32849.
 Приведите ответ в свободной форме.
 
 SYN сканировние
+
 Используется по умолчанию. При таком методе сканирования отправляется TCP пакет для установления соединения. Если в ответ приходит подтверждение SYN/ACK, то порт считается открытым. В ответ отправляется RST пакет (сброс соединения).
 
 ![Задание №2.1](https://github.com/newDjon/Attack/blob/main/nmap.png)
 
 FIN сканирование.
+
 При таком методе сканирования отправляется TCP пакет с флагом FIN, который используется для корректного закрытия соединения. Если в ответ приходит RST пакет, то порт считается закрытым.
 
 ![Задание №2.2](https://github.com/newDjon/Attack/blob/main/sF.png)
 
 UDP сканирование.
+
 При таком методе сканирования отправляется UDP пакет, если ответ не получен, идет повторная отправка. И если снова ответа нет то порт помечается как open|filtered. Если ответ получен, то порт помечается как open.
 
 ![Задание №2.3](https://github.com/newDjon/Attack/blob/main/sU.png)
 
 Xmas сканирование.
+
 При таком методе сканирования отправляется TCP-пакеты с установленными флагами PSH, URG и FIN. Если в ответ приходит RST, то порт закрыт.
 
 ![Задание №2.3](https://github.com/newDjon/Attack/blob/main/sX.png)

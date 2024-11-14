@@ -67,7 +67,7 @@ hydra -L users.txt -P pass.txt < ip-адрес > ssh
 По логам видно, что после 6 попыток подбора пароля проиходит блокировка ip адреса.
 При повторном запуске перебора пароля идет refused.
 
-![Задание №2.1](https://github.com/newDjon/Network-Protected/blob/main/fai2ban.png)
+![Задание №2.1](https://github.com/newDjon/Network-Protected/blob/main/fail2ban.png)
 
 ![Задание №2.2](https://github.com/newDjon/Network-Protected/blob/main/kali.png)
 

@@ -37,7 +37,9 @@ sudo nmap -sV < ip-адрес >
 
 В качестве ответа пришлите события, которые попали в логи Suricata и Fail2Ban, прокомментируйте результат.
 
-![Задание №1](https://github.com/newDjon/Attack/blob/main/nmap.png)
+![Задание №1](https://github.com/newDjon/Network-Protected/blob/main/suricata.png)
+
+По логам видно с какого ip адреса на какой порт идет сканирование.
 
 
 
@@ -62,7 +64,12 @@ hydra -L users.txt -P pass.txt < ip-адрес > ssh
 
 В качестве ответа пришлите события, которые попали в логи Suricata и Fail2Ban, прокомментируйте результат..
 
-![Задание №2.1](https://github.com/newDjon/Attack/blob/main/nmap.png)
+По логам видно, что после 6 попыток подбора пароля проиходит блокировка ip адреса.
+При повторном запуске перебора пароля идет refused.
+
+![Задание №2.1](https://github.com/newDjon/Network-Protected/blob/main/fai2ban.png)
+
+![Задание №2.2](https://github.com/newDjon/Network-Protected/blob/main/kali.png)
 
 
 ---
